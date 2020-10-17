@@ -309,12 +309,14 @@ ul {
 /*Menu Mobile*/
 
 .menu-mobile-icone {
-  width: 30px;
-  height: 30px;
-  margin-top: 5px;
-  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  margin-top: 3px;
+  margin-right: 5px;
 }
 .menu-mobile-icone img {
+  width: 35px;
+  height: 35px;
   padding: 3px;
 }
 
@@ -341,6 +343,32 @@ ul {
   color: #fff;
   font-family: 'Lobster', cursive;
   text-shadow: #191919 0.1em 0.1em 0.3em;
+}
+
+/*animação girar botao*/
+.menu-mobile-icone.aberto {
+  animation: abrir 0.5s;
+  transform: rotate(-90deg);
+}
+.menu-mobile-icone {
+  animation: fechar 0.9s;
+}
+
+@keyframes abrir {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+@keyframes fechar {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /*Responsivo*/
